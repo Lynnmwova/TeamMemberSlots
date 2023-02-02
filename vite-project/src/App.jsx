@@ -5,6 +5,9 @@ import Header from './header'
 import Content from './contents'
 import Footer from './footer'
 import 'bootstrap/dist/css/bootstrap.min.css';
+import Employees from './employees'
+
+
 function App() {
   const [count, setCount] = useState(0)
 
@@ -13,6 +16,7 @@ function App() {
      <Header></Header>
      <Content></Content>
      <Footer></Footer>
+     <Employees></Employees>
 
     </main>
   )
