@@ -1,6 +1,6 @@
 import { useState } from "react";
-
-
+import femaleProfile from "./img/1.png";
+import maleProfile from "./img/4.png";
 
 const Employees = () => {
     
@@ -94,8 +94,18 @@ const  [Employees, setEmployees] = useState(
     ]
 );
 
-    return(
+    return (
         <main>
+        {
+        Employees.map((employee) => {
+          <>
+<p>{ employee.fullName}</p>
+</>
+
+        }
+        ) 
+
+        }
             
         </main>
     )
