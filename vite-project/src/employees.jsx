@@ -5,7 +5,7 @@ import maleProfile from "./img/4.png";
 const Employees = () => {
     
     
-const  [Employees, setEmployees] = useState(
+const  [employees, setEmployees] = useState(
     [
         {
             id: 1,
@@ -95,21 +95,33 @@ const  [Employees, setEmployees] = useState(
 );
 
     return (
-        <main>
+        <main className="container">
+        <div className="row justify-content-center mt-3 mb-3">
+        <div className="col-8">
+        <div className="card-collection">
+        
         {
-        Employees.map((employee) => {
-          <>
-<p>{ employee.fullName}</p>
-</>
+        employees.map((employee) =>  (
+          <div id={employee.id} className="card m-2" style={{cursor:"Pointer"}}>
+          {(employee.gender=== "male" ) ?  <img src={maleProfile} className="card-img-top"/>
+          : <img src={femaleProfile} className="card-img-top"/>
+          }
+        )
+          <div className="card-body">
+            <h5 className="card-title">Full Name: {employee.fullName}</h5>
+            <p className="card-text"><b>Designition: {employee.designation}</b></p>
+          </div>
+          </div>
 
-        }
-        ) 
 
+        ))
         }
-            
+          </div>
+        </div>
+        </div>
         </main>
     )
-}
+      }
 
 
 export default Employees;
