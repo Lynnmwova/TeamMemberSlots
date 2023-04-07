@@ -4,7 +4,7 @@ import maleProfile from "./img/4.png";
 
 const Employees = () => {
     
-    
+  // Using react hooks to introduce a new variable "employees" and "setEmployees" to update   
 const  [employees, setEmployees] = useState(
     [
         {
@@ -114,7 +114,8 @@ const  [employees, setEmployees] = useState(
           </div>
 
 
-        ))
+        )
+        )
         }
           </div>
         </div>
