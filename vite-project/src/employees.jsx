@@ -2,11 +2,15 @@ import { useState } from "react";
 import femaleProfile from "./img/cosplayer.png";
 import maleProfile from "./img/man.png";
 
+// start of the employee functional component
 const Employees = () => {
 
   const[selectedTeam, setTeam] = useState("TeamB");
     
-  // Using react hooks to introduce a new variable "employees" and "setEmployees" to update   
+  
+// Using react hooks to declare a new state variable "employees" and "setEmployees" to update   
+// useState returns a pair: the current state and a function that lets you update it.
+// only call hooks at the top level
 const  [employees, setEmployees] = useState(
     [
         {
@@ -147,3 +151,5 @@ function handleEmployeeCardClick(event){
 
 
 export default Employees;
+
+//event handlers in react are named using camelCase and are passed as a function in jsx eg onClick={handleEmployeeCardClick}
